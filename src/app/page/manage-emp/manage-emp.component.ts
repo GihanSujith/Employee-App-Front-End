@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-manage-emp',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './manage-emp.component.html',
   styleUrl: './manage-emp.component.css'
 })
 export class ManageEmpComponent {
-  public employeeObj ={
-    firstName:"",
-    lastName:"",
-    email:"",
-    departmentId:"",
-    roleId:""
+
+  public firstName:string=""
+
+  addEmployee(){
+    alert(this.firstName)
   }
 }
