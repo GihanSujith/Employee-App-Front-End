@@ -18,8 +18,8 @@
             <td>{{employee.email}}</td>
             <td>{{employee.departmentId}}</td>
             <td>{{employee.roleId}}</td>
-            <td><button class="btn btn-danger">
-                <i class="bi bi-trash3-fill"></i>Delete
+            <td><button class="btn btn-danger " (click)="deleteEmployee(employee)">
+                <i class="bi bi-trash "></i>Delete
             </button></td>
         </tr>
     </table>
