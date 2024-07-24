@@ -72,4 +72,28 @@ export class ViewAllEmployeeComponent {
     });
 
   }
+  public selectedEmployee: any = {
+    "id": null,
+    "firstName": null,
+    "lastName": null,
+    "email": null,
+    "departmentId": null,
+    "roleId": null
+  };
+
+  updateEmploye(employe: any) {
+
+    if(employe!=null){
+      this.selectedEmployee = employe;
+    }
+
+    console.log(employe);
+
+  }
+
+  saveUpdateEmployee(){
+    this.http.put("http://localhost:8080/emp-controller/update-employee", this.selectedEmployee).subscribe(res => {
+      console.log("updated!");
+    })
+  }
 }
